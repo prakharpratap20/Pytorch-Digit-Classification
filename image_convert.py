@@ -1,8 +1,8 @@
 from PIL import Image
 from torchvision.transforms import ToTensor, Grayscale
 
-# Open the image
-img = Image.open('four.png')
+# Open the image 
+img = Image.open('four.png') # enter the name of image you want to convert 
 
 # Convert the image to grayscale (if not already in grayscale)
 img = Grayscale()(img)
@@ -14,6 +14,6 @@ img = img.resize((28, 28))
 img_tensor = ToTensor()(img).unsqueeze(0).to('cpu')
 
 # Save the preprocessed image
-img_path = f'four_img.png'
+img_path = 'four_img.png' # name of image after getting converted
 img.save(img_path)
 
